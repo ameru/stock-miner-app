@@ -1,0 +1,46 @@
+/html/body/div[5]/div[1]/div[1]/div[2]/table/tbody/tr/td[1]/span
+
+/html/body/div[5]/div[1]/div[1]/div[2]/table/tbody/tr/td[1]/span
+
+
+SQL for Load the Database
+
+String sqlquery = "Select stock from stocks";
+
+
+
+
+SQL for Load the JTable with Selection:
+
+String sqlquery = "Select * from stock_price where stock = '" + selection + "'";
+
+
+
+
+REGEX For Price:
+
+streamFormat\s*=\s*\"ToHundredth\"\s*streamFeed\s*=\s*\"(?:MorningstarQuote|BatsUS)\"\>(.*?)\<
+
+
+
+
+REGEX for Previous close:
+
+\<td\>Previous\s*close\s*\<\/td\>\<td\s*class=\"wsod_quoteDataPoint\"\>(.*?)\<
+
+
+
+
+REGEX for Today's open:
+
+\<td\>Today\&rsquo\;s\s*open\<\/td\>\<td\s*class=\"wsod_quoteDataPoint\"\>(.*?)\<
+
+
+
+
+SQL Update for data scraping:
+
+String sqlupdate = "Insert into stock_price (stock, previousclose, currentopen, currentprice, datetime) " +
+"values ('" + selection + "',"+ priceData[0] + "," + prevData[0] + "," + openData[0] + ", strftime('%s','now'))";
+
+
