@@ -13,4 +13,4 @@ playing around with JQuery, JFrame, Regex, and SQLite!
 4. Select the stock you'd like to view, and click "Update" to get new prices.
 <img src = https://github.com/ameru/stock-miner-app/blob/master/stock_app_imgs/stock4.png>
 
-I only added a couple stock prices (sourced from money.CNN) but you can always change/add more stocks by adjusting the query number at the end through the source code. Happy scraping!
+I only added a couple stock prices (sourced from money.CNN) but you can always change/add more stocks by adjusting the query number at the end through the source code. You can run the program with the database I used under the file name "stocks.db". Happy scraping!
